@@ -1,0 +1,12 @@
+#drop database storemanager;
+create database storemanager;
+use storemanager;
+create table Products(id int primary key NOT NULL AUTO_INCREMENT,product varchar(30));
+
+create table Legger(id int primary key NOT NULL AUTO_INCREMENT,details varchar(50),type varchar(3),amount float,date date);
+insert into legger(details,type,amount,date) values('abc','dd',0,'1996-02-19');
+
+create table Stock(id int primary key NOT NULL AUTO_INCREMENT,productId int,rateperkg float,quantity float,amount float,date date,foreign key(productId) references products(id));
+create table StockHistory(id int primary key NOT NULL AUTO_INCREMENT,productId int,rateperkg float,quantity float,amount float,date date,foreign key(productId) references products(id));
+
+create table Sales(id int primary key NOT NULL AUTO_INCREMENT,productId int,rateperkg float,quantity float,amount float,date date,profit float,foreign key(productId) references products(id));

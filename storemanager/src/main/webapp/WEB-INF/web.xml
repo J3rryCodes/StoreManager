@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app  xmlns="http://java.sun.com/xml/ns/j2ee"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"   version="2.4" >
+	<display-name>storemanager</display-name>
+	<servlet>
+		<description>
+		</description>
+		<display-name>BalanceStockController</display-name>
+		<servlet-name>BalanceStockController</servlet-name>
+		<servlet-class>controller.BalanceStockController</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>DailyReportController</display-name>
+		<servlet-name>DailyReportController</servlet-name>
+		<servlet-class>controller.DailyReportController</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>MonthlyReportController</display-name>
+		<servlet-name>MonthlyReportController</servlet-name>
+		<servlet-class>controller.MonthlyReportController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BalanceStockController</servlet-name>
+		<url-pattern>/BalanceStock</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DailyReportController</servlet-name>
+		<url-pattern>/DailyReport</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MonthlyReportController</servlet-name>
+		<url-pattern>/MonthlyReport</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>Stock</welcome-file>
+	</welcome-file-list>
+</web-app>
